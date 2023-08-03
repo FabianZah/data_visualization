@@ -35,14 +35,29 @@ with tab3:
     x = df[x_axis]/10000 
     y = df[y_axis]/10000
     y_mean = np.mean(df[y_axis]/10000)
-    y_std = np.std(df[y_axis]/10000)
-    st.write(y_mean)
-    
+    y_std = np.std(df[y_axis]/10000
+                   
+    genre = st.radio(
+      "Choose the standard deviation range to plot",
+      ('1SD', '2SD', '3D'))
+         
     p = figure(x_axis_label=x_axis, y_axis_label=y_axis)
     
     p.circle(x, y)
     p.line([0, 50],[y_mean,y_mean], line_width = 2)
-    p.line([0, 50],[y_mean-y_std,y_mean-y_std], line_width = 1.5, line_color = 'gray')
-    p.line([0, 50],[y_mean+y_std,y_mean+y_std], line_width = 1.5, line_color = 'gray')
+  
+    if genre == '1SD':
+      p.line([0, 50],[y_mean-y_std,y_mean-y_std], line_width = 1.5, line_color = 'gray')
+      p.line([0, 50],[y_mean+y_std,y_mean+y_std], line_width = 1.5, line_color = 'gray')
+         
+    elif genre == '2SD':
+      p.line([0, 50],[y_mean-2*y_std,y_mean-2*y_std], line_width = 1.5, line_color = 'gray')
+      p.line([0, 50],[y_mean+2*y_std,y_mean+2*y_std], line_width = 1.5, line_color = 'gray')
+    elif genre == '3D':
+      p.line([0, 50],[y_mean-3*y_std,y_mean-3*y_std], line_width = 1.5, line_color = 'gray')
+      p.line([0, 50],[y_mean+3*y_std,y_mean+3*y_std], line_width = 1.5, line_color = 'gray')
+    else:
+      st.write('Choose a proper SD')
+
     
     st.bokeh_chart(p, use_container_width=True)
