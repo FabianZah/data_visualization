@@ -24,10 +24,9 @@ x = [1, 2, 3, 4, 5]
 y = [6, 7, 2, 4, 5]
 
 p = figure(
-    title='simple circle example',
     x_axis_label='x',
     y_axis_label='y')
 
-p.cirlce(x, y)
+p.circle(x, y)
 
 st.bokeh_chart(p, use_container_width=True)
