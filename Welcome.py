@@ -42,7 +42,7 @@ with tab3:
     
     p.circle(x, y)
     p.line([0, 50],[y_mean,y_mean], line_width = 2)
-    p.line([0, 50],[y_mean-y_std,y_mean-y_std], line_width = 1.5, line_dash = [--])
-    p.line([0, 50],[y_mean+y_std,y_mean+y_std], line_width = 1.5, line_dash = [--])
+    p.line([0, 50],[y_mean-y_std,y_mean-y_std], line_width = 1.5, line_dash = [---])
+    p.line([0, 50],[y_mean+y_std,y_mean+y_std], line_width = 1.5, line_dash = [---])
     
     st.bokeh_chart(p, use_container_width=True)
