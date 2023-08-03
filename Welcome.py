@@ -13,7 +13,6 @@ for i in os.listdir():
 tab1, tab2, tab3 = st.tabs(["Hello world", "Dataframe", "Interactive plot"])
 
 with tab1:
-  st.header("Hello world")
   st.write('Hello World')
   
 with tab2:
