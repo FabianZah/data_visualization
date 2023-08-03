@@ -37,11 +37,9 @@ with tab3:
     y_mean = np.mean(df[y_axis]/10000)
     st.write(y_mean)
     
-    p = figure(
-        x_axis_label=x_axis,
-        y_axis_label=y_axis)
+    p = figure(x_axis_label=x_axis, y_axis_label=y_axis)
     
     p.circle(x, y)
-    p.line([0, 100][y_mean,y_mean])
+    p.line([0, 50][1.2, 1.2])
     
     st.bokeh_chart(p, use_container_width=True)
