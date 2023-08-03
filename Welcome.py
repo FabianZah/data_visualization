@@ -35,7 +35,7 @@ with tab3:
     x = df[x_axis]/10000 
     y = df[y_axis]/10000
     y_mean = np.mean(df[y_axis]/10000)
-    print(y_mean)
+    st.write(y_mean)
     
     p = figure(
         x_axis_label=x_axis,
