@@ -27,8 +27,8 @@ x = df[x_axis]
 y = df[y_axis]
 
 p = figure(
-    x_axis_label='x',
-    y_axis_label='y')
+    x_axis_label=x_axis,
+    y_axis_label=y_axis)
 
 p.circle(x, y)
 
