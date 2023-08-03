@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import os
 
 file_name_list = []
@@ -18,5 +18,5 @@ x_axis = st.selectbox('select element', el_list)
 
 st.multiselect('select location', file_name_list, file_name_list[0])
 
-plt.scatter(df['Mg'],df['Si'])
-plt.show()
+# plt.scatter(df['Mg'],df['Si'])
+# plt.show()
