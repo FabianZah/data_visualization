@@ -23,8 +23,8 @@ el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select x axis', el_list)
 y_axis = st.selectbox('select y axis', el_list)
 
-x = df[x_axis]
-y = df[y_axis]
+x = df[x_axis]/10000 
+y = df[y_axis]/10000
 
 p = figure(
     x_axis_label=x_axis,
