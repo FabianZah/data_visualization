@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from bokeh.plotting import figure, show
+from bokeh.io import output_notebook
 # import matplotlib.pyplot as plt
 import os
 
@@ -18,5 +20,8 @@ x_axis = st.selectbox('select element', el_list)
 
 st.multiselect('select location', file_name_list, file_name_list[0])
 
-# plt.scatter(df['Mg'],df['Si'])
-# plt.show()
+output_notebook()
+p = figure(x_axis_label = 'x', y_axis_label = 'y')
+p.circle(df['Mg']/10000,df['Si']/10000)
+
+st.bokeh_chart(p, use_container_width=True)
