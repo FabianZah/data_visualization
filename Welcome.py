@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 from bokeh.plotting import figure
-# from bokeh.io import output_notebook
-# import matplotlib.pyplot as plt
 import os
 
 file_name_list = []
@@ -35,11 +34,13 @@ with tab3:
     st.header('Plot of your selection')
     x = df[x_axis]/10000 
     y = df[y_axis]/10000
+    y_mean = np.mean(df[y_axis]/10000)
     
     p = figure(
         x_axis_label=x_axis,
         y_axis_label=y_axis)
     
     p.circle(x, y)
+    p.line([0, 20][y_mean,y_mean])
     
     st.bokeh_chart(p, use_container_width=True)
