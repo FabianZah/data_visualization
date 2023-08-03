@@ -40,6 +40,6 @@ with tab3:
     p = figure(x_axis_label=x_axis, y_axis_label=y_axis)
     
     p.circle(x, y)
-    p.line([0, 50][1, 1])
+    p.line([0, 50],[y_mean,y_mean])
     
     st.bokeh_chart(p, use_container_width=True)
