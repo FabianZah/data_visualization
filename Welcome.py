@@ -27,6 +27,7 @@ with col1:
   x_axis = st.selectbox('select x axis', el_list)
   y_axis = st.selectbox('select y axis', el_list)
 with col2:
+  st.header('Plot of your selection')
   x = df[x_axis]/10000 
   y = df[y_axis]/10000
   
