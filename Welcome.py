@@ -6,6 +6,8 @@ file_name_list = []
 for i in os.listdir():
   if i.endswith('csv'):
     file_name_list.append(i)
+  else:
+    print('error')
 
 st.write('Hello World')
 
