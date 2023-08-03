@@ -39,7 +39,7 @@ with tab3:
     y_mean = np.mean(df[y_axis]/10000)
     y_std = np.std(df[y_axis]/10000)
                    
-    genre = st.radio(
+    SD_range = st.radio(
       "Choose the standard deviation range to plot",
       ('1SD', '2SD', '3SD'))
          
@@ -48,14 +48,14 @@ with tab3:
     p.circle(x, y)
     p.line([x_min-2, x_max+2],[y_mean,y_mean], line_width = 2)
   
-    if genre == '1SD':
+    if SD_range == '1SD':
       p.line([x_min-2, x_max+2],[y_mean-y_std,y_mean-y_std], line_width = 1.5, line_color = 'gray')
       p.line([x_min-2, x_max+2],[y_mean+y_std,y_mean+y_std], line_width = 1.5, line_color = 'gray')
          
-    elif genre == '2SD':
+    elif SD_range == '2SD':
       p.line([x_min-2, x_max+2],[y_mean-2*y_std,y_mean-2*y_std], line_width = 1.5, line_color = 'gray')
       p.line([x_min-2, x_max+2],[y_mean+2*y_std,y_mean+2*y_std], line_width = 1.5, line_color = 'gray')
-    elif genre == '3SD':
+    elif SD_range == '3SD':
       p.line([x_min-2, x_max+2],[y_mean-3*y_std,y_mean-3*y_std], line_width = 1.5, line_color = 'gray')
       p.line([x_min-2, x_max+2],[y_mean+3*y_std,y_mean+3*y_std], line_width = 1.5, line_color = 'gray')
     else:
