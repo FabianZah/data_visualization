@@ -15,8 +15,8 @@ st.write('Hello World')
 df = pd.read_csv('Bastar Craton.csv')
 st.dataframe(df)
 
-file_name = st.multiselect('select location', file_name_list, file_name_list[0])
-st.write(i)
+# file_name = st.multiselect('select location', file_name_list, file_name_list[0])
+file_name = st.selectbox('select location', file_name_list)
 df = pd.read_csv(file_name[0])
 
 el_list = df.columns.tolist()[27:80]
