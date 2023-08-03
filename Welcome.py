@@ -19,7 +19,7 @@ el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select x axis', el_list)
 y_axis = st.selectbox('select y axis', el_list)
 
-st.multiselect('select location', file_name_list, file_name_list[0])
+st.multiselect('select location', file_name_list)
 
 x = df[x_axis]
 y = df[y_axis]
