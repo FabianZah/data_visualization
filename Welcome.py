@@ -15,9 +15,9 @@ st.write('Hello World')
 df = pd.read_csv('Bastar Craton.csv')
 st.dataframe(df)
 
-i = st.multiselect('select location', file_name_list)
+file_name = st.multiselect('select location', file_name_list)
 st.write(i)
-df = pd.read_csv(file_name_list[i])
+df = pd.read_csv(file_name[0])
 
 el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select x axis', el_list)
