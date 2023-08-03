@@ -34,6 +34,8 @@ with tab3:
     st.header('Plot of your selection')
     x = df[x_axis]/10000 
     y = df[y_axis]/10000
+    x_min = np.min(df[x_axis]/10000)
+    x_max = np.max(df[x_axis]/10000)
     y_mean = np.mean(df[y_axis]/10000)
     y_std = np.std(df[y_axis]/10000)
                    
@@ -44,7 +46,7 @@ with tab3:
     p = figure(x_axis_label=x_axis, y_axis_label=y_axis)
     
     p.circle(x, y)
-    p.line([0, 50],[y_mean,y_mean], line_width = 2)
+    p.line([x_min-5, x_max+5],[y_mean,y_mean], line_width = 2)
   
     if genre == '1SD':
       p.line([0, 50],[y_mean-y_std,y_mean-y_std], line_width = 1.5, line_color = 'gray')
