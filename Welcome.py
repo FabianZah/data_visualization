@@ -20,7 +20,7 @@ x_axis = st.selectbox('select element', el_list)
 
 st.multiselect('select location', file_name_list, file_name_list[0])
 
-x = df['Mg']
+x = x_axis
 y = df['Si']
 
 p = figure(
