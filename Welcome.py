@@ -17,7 +17,7 @@ st.dataframe(df)
 
 # file_name = st.multiselect('select location', file_name_list, file_name_list[0])
 file_name = st.selectbox('select location', file_name_list)
-df = pd.read_csv(file_name[0])
+df = pd.read_csv(file_name)
 
 el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select x axis', el_list)
