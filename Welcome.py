@@ -39,7 +39,7 @@ with tab3:
                    
     genre = st.radio(
       "Choose the standard deviation range to plot",
-      ('1SD', '2SD', '3D'))
+      ('1SD', '2SD', '3SD'))
          
     p = figure(x_axis_label=x_axis, y_axis_label=y_axis)
     
@@ -53,7 +53,7 @@ with tab3:
     elif genre == '2SD':
       p.line([0, 50],[y_mean-2*y_std,y_mean-2*y_std], line_width = 1.5, line_color = 'gray')
       p.line([0, 50],[y_mean+2*y_std,y_mean+2*y_std], line_width = 1.5, line_color = 'gray')
-    elif genre == '3D':
+    elif genre == '3SD':
       p.line([0, 50],[y_mean-3*y_std,y_mean-3*y_std], line_width = 1.5, line_color = 'gray')
       p.line([0, 50],[y_mean+3*y_std,y_mean+3*y_std], line_width = 1.5, line_color = 'gray')
     else:
