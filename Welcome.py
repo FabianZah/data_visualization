@@ -35,7 +35,7 @@ with tab3:
     x = df[x_axis]/10000 
     y = df[y_axis]/10000
     y_mean = np.mean(df[y_axis]/10000)
-    y_std = np.std(df[y_axis]/10000
+    y_std = np.std(df[y_axis]/10000)
                    
     genre = st.radio(
       "Choose the standard deviation range to plot",
