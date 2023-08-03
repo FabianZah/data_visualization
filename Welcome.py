@@ -18,7 +18,7 @@ st.dataframe(df)
 col1, col2 = st.columns(2)
 
 with col1:
-   st.header("Selection")
+  st.header("Selection")
   # file_name = st.multiselect('select location', file_name_list, file_name_list[0])
   file_name = st.selectbox('select location', file_name_list)
   df = pd.read_csv(file_name)
