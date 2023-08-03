@@ -10,7 +10,7 @@ for i in os.listdir():
 st.write('Hello World')
 
 df = pd.read_csv('Bastar Craton.csv')
-st.write('df')
+st.dataframe(df)
 
 el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select element', el_list)
