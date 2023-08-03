@@ -46,18 +46,18 @@ with tab3:
     p = figure(x_axis_label=x_axis, y_axis_label=y_axis)
     
     p.circle(x, y)
-    p.line([x_min-5, x_max+5],[y_mean,y_mean], line_width = 2)
+    p.line([x_min-2, x_max+2],[y_mean,y_mean], line_width = 2)
   
     if genre == '1SD':
-      p.line([x_min-5, x_max+5],[y_mean-y_std,y_mean-y_std], line_width = 1.5, line_color = 'gray')
-      p.line([x_min-5, x_max+5],[y_mean+y_std,y_mean+y_std], line_width = 1.5, line_color = 'gray')
+      p.line([x_min-2, x_max+2],[y_mean-y_std,y_mean-y_std], line_width = 1.5, line_color = 'gray')
+      p.line([x_min-2, x_max+2],[y_mean+y_std,y_mean+y_std], line_width = 1.5, line_color = 'gray')
          
     elif genre == '2SD':
-      p.line([x_min-5, x_max+5],[y_mean-2*y_std,y_mean-2*y_std], line_width = 1.5, line_color = 'gray')
-      p.line([x_min-5, x_max+5],[y_mean+2*y_std,y_mean+2*y_std], line_width = 1.5, line_color = 'gray')
+      p.line([x_min-2, x_max+2],[y_mean-2*y_std,y_mean-2*y_std], line_width = 1.5, line_color = 'gray')
+      p.line([x_min-2, x_max+2],[y_mean+2*y_std,y_mean+2*y_std], line_width = 1.5, line_color = 'gray')
     elif genre == '3SD':
-      p.line([x_min-5, x_max+5],[y_mean-3*y_std,y_mean-3*y_std], line_width = 1.5, line_color = 'gray')
-      p.line([x_min-5, x_max+5],[y_mean+3*y_std,y_mean+3*y_std], line_width = 1.5, line_color = 'gray')
+      p.line([x_min-2, x_max+2],[y_mean-3*y_std,y_mean-3*y_std], line_width = 1.5, line_color = 'gray')
+      p.line([x_min-2, x_max+2],[y_mean+3*y_std,y_mean+3*y_std], line_width = 1.5, line_color = 'gray')
     else:
       st.write('Choose a proper SD')
 
