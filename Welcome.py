@@ -15,7 +15,7 @@ st.write('Hello World')
 df = pd.read_csv('Bastar Craton.csv')
 st.dataframe(df)
 
-file_name = st.multiselect('select location', file_name_list)
+file_name = st.multiselect('select location', file_name_list, file_name_list[0])
 st.write(i)
 df = pd.read_csv(file_name[0])
 
