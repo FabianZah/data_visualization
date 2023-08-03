@@ -19,9 +19,9 @@ el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select element', el_list)
 
 st.multiselect('select location', file_name_list, file_name_list[0])
-
+df2 = pd.read_csv('Bastar Craton.csv')
 output_notebook()
 p = figure(x_axis_label = 'x', y_axis_label = 'y')
-p.circle(df['Mg']/10000,df['Si']/10000)
+p.circle(df2['Mg']/10000,df2['Si']/10000)
 
 st.bokeh_chart(p, use_container_width=True)
