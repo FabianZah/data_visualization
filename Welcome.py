@@ -35,11 +35,14 @@ with tab3:
     x = df[x_axis]/10000 
     y = df[y_axis]/10000
     y_mean = np.mean(df[y_axis]/10000)
+    y_std = np.std(df[y_axis]/10000)
     st.write(y_mean)
     
     p = figure(x_axis_label=x_axis, y_axis_label=y_axis)
     
     p.circle(x, y)
-    p.line([0, 50],[y_mean,y_mean])
+    p.line([0, 50],[y_mean,y_mean], line_width = 2)
+    p.line([0, 50],[y_mean-y_std,y_mean-y_std], line_width = 1.5, line_dash = [--])
+    p.line([0, 50],[y_mean+y_std,y_mean+y_std], line_width = 1.5, line_dash = [--])
     
     st.bokeh_chart(p, use_container_width=True)
